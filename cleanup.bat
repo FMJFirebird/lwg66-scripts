@@ -1,4 +1,5 @@
 :: 1. UNBEDINGT NUR IM DCS Verzeichnis ausführen!!!
+pushd %~dp0
 
 :: Entfernt ggf. ein bestehendes Git Verzeichnis.
 rmdir /s /q .\.git
@@ -14,3 +15,4 @@ del .gitignore
 :: 3. Löscht rekursiv alle Verzeichnisse, die "TaktLwG" beinhalten. (Kommentarzeichen "::" am Anfang der Zeile entfernen!)
 for /d /r %%i in (*TaktLwG*) do @rmdir /q /s "%%i"
 
+cmd /c Pause
